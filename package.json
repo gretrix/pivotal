@@ -1,7 +1,8 @@
 {
-  "name": "pivotal",
+  "name": "pivotaltech-solutions",
   "version": "0.1.0",
   "private": true,
+  "description": "PivotalTech Solutions - Innovative Technology Solutions Website",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
