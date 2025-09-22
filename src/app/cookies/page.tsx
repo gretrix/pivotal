@@ -136,9 +136,8 @@ export default function CookiePolicyPage() {
                 by posting the new policy on this page and updating the &quot;Last updated&quot; date.
               </p>
               <div className="text-gray-700">
-                <p><strong>Email:</strong> privacy@pivotaltech.com</p>
+                <p><strong>Email:</strong> privacy@pivotaltech.solutions</p>
                 <p><strong>Address:</strong> 4290 Bells Ferry Rd Ste 134 #3025, Kennesaw, GA 30144</p>
-                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
               </div>
             </div>
           </div>
