@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Our expert team combines technical excellence with strategic thinking to help 
               organizations navigate the digital landscape and achieve sustainable competitive 
-              advantages in today's rapidly evolving market.
+              advantages in today&apos;s rapidly evolving market.
             </p>
           </div>
 

@@ -13,7 +13,7 @@ export default function Portfolio() {
             Our <span className="text-blue-600 bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">Portfolio</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our successful projects and see how we've helped businesses transform 
+            Explore our successful projects and see how we&apos;ve helped businesses transform 
             their operations with innovative technology solutions.
           </p>
         </div>

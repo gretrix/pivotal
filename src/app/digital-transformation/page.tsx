@@ -179,7 +179,7 @@ export default function DigitalTransformation() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">ZOHO Consulting</h3>
               <p className="text-gray-600 mb-4">
-                Leverage the power of ZOHO's comprehensive business suite 
+                Leverage the power of ZOHO&apos;s comprehensive business suite 
                 for CRM, project management, and business automation.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -221,7 +221,7 @@ export default function DigitalTransformation() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Oracle Consulting</h3>
               <p className="text-gray-600 mb-4">
-                Optimize your enterprise operations with Oracle's comprehensive 
+                Optimize your enterprise operations with Oracle&apos;s comprehensive 
                 suite of business applications and cloud solutions.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -243,7 +243,7 @@ export default function DigitalTransformation() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">HubSpot Consulting</h3>
               <p className="text-gray-600 mb-4">
                 Accelerate your inbound marketing and sales growth with 
-                HubSpot's integrated platform and expert implementation.
+                HubSpot&apos;s integrated platform and expert implementation.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• HubSpot CRM setup</li>
