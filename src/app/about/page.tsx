@@ -90,7 +90,7 @@ export default function AboutPage() {
                     <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full border-2 border-white shadow-md"></div>
                     <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full border-2 border-white shadow-md"></div>
                   </div>
-                  <span className="text-sm text-gray-600">500+ Happy Clients</span>
+                  <span className="text-sm text-gray-600">50+ Happy Clients</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="flex items-center">

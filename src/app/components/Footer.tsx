@@ -6,20 +6,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-pivotal-600 to-pivotal-light-400 rounded-lg flex items-center justify-center mr-3">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-white">PIVOTAL</span>
-                <span className="text-xs font-medium text-pivotal-light-400 -mt-1">TECH SOLUTIONS</span>
-              </div>
-            </div>
             <p className="text-gray-400 mb-4">
               Empowering businesses with innovative technology solutions that drive growth, 
-              efficiency, and digital transformation.
+              efficiency, and digital transformation. We specialize in delivering cutting-edge 
+              web development, cloud solutions, AI & machine learning, and cybersecurity services 
+              tailored to meet your unique business needs.
+            </p>
+            <p className="text-gray-400 mb-4">
+              Our expert team combines technical excellence with strategic thinking to help 
+              organizations navigate the digital landscape and achieve sustainable competitive 
+              advantages in today's rapidly evolving market.
             </p>
           </div>
 
@@ -28,27 +24,27 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/services" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
+                <a href="/web-development" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
                   Web Development
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
+                <a href="/cloud-solutions" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
                   Cloud Solutions
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
+                <a href="/digital-transformation" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
                   Digital Transformation
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
+                <a href="/ai-machine-learning" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
                   AI & Machine Learning
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
+                <a href="/cybersecurity" className="text-gray-400 hover:text-pivotal-light-400 transition-colors duration-200">
                   Cybersecurity
                 </a>
               </li>
@@ -93,7 +89,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-gray-400">
-                &copy; 2024 PivotalTech Solutions. All rights reserved.
+                &copy; 2025 PivotalTech Solutions. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-6 text-sm">
