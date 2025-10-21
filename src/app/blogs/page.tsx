@@ -127,7 +127,7 @@ export default async function BlogsPage() {
                 </div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Blog Coming Soon</h2>
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  We're working on creating amazing content for you. Check back soon for our latest insights and updates!
+                  We&apos;re working on creating amazing content for you. Check back soon for our latest insights and updates!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/services" className="group bg-gradient-to-r from-blue-600 to-emerald-500 hover:from-blue-700 hover:to-emerald-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">

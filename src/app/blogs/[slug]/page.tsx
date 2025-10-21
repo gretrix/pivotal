@@ -10,6 +10,9 @@ interface BlogPost {
   content: {
     rendered: string
   }
+  excerpt: {
+    rendered: string
+  }
   date: string
   slug: string
   featured_media: number
