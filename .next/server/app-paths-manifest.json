@@ -1,4 +1,19 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/ai-machine-learning/page": "app/ai-machine-learning/page.js",
+  "/about/page": "app/about/page.js",
+  "/blogs/[slug]/page": "app/blogs/[slug]/page.js",
+  "/cloud-solutions/page": "app/cloud-solutions/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/cookies/page": "app/cookies/page.js",
+  "/cybersecurity/page": "app/cybersecurity/page.js",
+  "/digital-transformation/page": "app/digital-transformation/page.js",
   "/page": "app/page.js",
-  "/portfolio/page": "app/portfolio/page.js"
+  "/portfolio/page": "app/portfolio/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/services/page": "app/services/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/web-development/page": "app/web-development/page.js",
+  "/blogs/page": "app/blogs/page.js"
 }
