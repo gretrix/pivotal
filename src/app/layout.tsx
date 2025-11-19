@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   keywords: 'technology solutions, web development, cloud solutions, digital transformation, business technology, software development',
   authors: [{ name: 'PivotalTech Solutions' }],
   creator: 'PivotalTech Solutions',
+  icons: {
+    icon: '/pivotaltech_icon.png',
+    apple: '/pivotaltech_icon.png',
+  },
   openGraph: {
     title: 'PivotalTech Solutions - Innovative Technology Solutions',
     description: 'Empowering businesses with innovative technology solutions that drive growth, efficiency, and digital transformation.',
