@@ -53,12 +53,12 @@ export default function Navbar() {
               {/* Logo */}
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
-                  <div className="w-20 h-20">
+                  <div className="w-32 h-32">
           <Image
-            src="/logo.png"
+            src="/pivotal_tech.png"
             alt="Pivotal Tech Solutions Logo"
-            width={80}
-            height={80}
+            width={128}
+            height={128}
             className="w-full h-full object-contain"
             priority
           />
