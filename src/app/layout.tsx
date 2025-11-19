@@ -21,8 +21,13 @@ export const metadata: Metadata = {
   authors: [{ name: 'PivotalTech Solutions' }],
   creator: 'PivotalTech Solutions',
   icons: {
-    icon: '/pivotaltech_icon.png',
-    apple: '/pivotaltech_icon.png',
+    icon: [
+      { url: '/pivotaltech_icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/pivotaltech_icon.png', type: 'image/png' },
+    ],
+    shortcut: '/pivotaltech_icon.png',
   },
   openGraph: {
     title: 'PivotalTech Solutions - Innovative Technology Solutions',
