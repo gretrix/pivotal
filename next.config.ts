@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  // Redirects configuration
+  async redirects() {
+    return [
+      {
+        source: '/meeting-jt',
+        destination: 'https://calendly.com/meeting-jt',
+        permanent: true, // 308 redirect (permanent)
+      },
+    ];
+  },
   // Optimize webpack
   webpack: (config, { dev }) => {
     if (dev) {
