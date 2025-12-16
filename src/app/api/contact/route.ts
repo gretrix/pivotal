@@ -1,0 +1,91 @@
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const { name, email, phone, company, message } = body;
+
+    // Validate required fields
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: 'Name, email, and message are required' },
+        { status: 400 }
+      );
+    }
+
+    // Create transporter
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    // Email to JT with form details
+    const notificationEmail = {
+      from: process.env.SMTP_USER,
+      to: process.env.NOTIFICATION_EMAIL,
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
+    };
+
+    // Confirmation email to user
+    const confirmationEmail = {
+      from: process.env.SMTP_USER,
+      to: email,
+      subject: 'Thank You for Contacting Pivotal Tech Solutions',
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #2563eb;">Thank You for Reaching Out!</h2>
+          <p>Hi ${name},</p>
+          <p>We've received your message and appreciate you contacting Pivotal Tech Solutions. Our team will review your inquiry and get back to you shortly.</p>
+          
+          <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin-top: 0;">Your Message:</h3>
+            <p>${message.replace(/\n/g, '<br>')}</p>
+          </div>
+          
+          <p>If you have any urgent questions, feel free to call us at <strong>404-374-9322</strong>.</p>
+          
+          <p>Best regards,<br>
+          <strong>Pivotal Tech Solutions Team</strong></p>
+          
+          <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
+          <p style="font-size: 12px; color: #6b7280;">
+            Pivotal Tech Solutions<br>
+            4290 Bells Ferry Rd, Ste 134 #3025<br>
+            Kennesaw, GA 30144<br>
+            <a href="https://pivotaltech.solutions">pivotaltech.solutions</a>
+          </p>
+        </div>
+      `,
+    };
+
+    // Send both emails
+    await transporter.sendMail(notificationEmail);
+    await transporter.sendMail(confirmationEmail);
+
+    return NextResponse.json(
+      { message: 'Emails sent successfully' },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return NextResponse.json(
+      { error: 'Failed to send email' },
+      { status: 500 }
+    );
+  }
+}
