@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -25,13 +27,23 @@ export default function ContactForm() {
     setStatus('loading');
     setErrorMessage('');
 
+    // Get reCAPTCHA token
+    const recaptchaToken = await recaptchaRef.current?.executeAsync();
+    recaptchaRef.current?.reset();
+
+    if (!recaptchaToken) {
+      setStatus('error');
+      setErrorMessage('Please complete the reCAPTCHA verification.');
+      return;
+    }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
       if (!response.ok) {
@@ -151,6 +163,14 @@ export default function ContactForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none outline-none bg-white text-gray-900"
             placeholder="Tell us about your project or inquiry..."
+          />
+        </div>
+
+        <div className="flex justify-center">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
           />
         </div>
 
