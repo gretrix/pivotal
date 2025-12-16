@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   // Optimize for faster development
   typescript: {
     // Only check types during build, not during dev

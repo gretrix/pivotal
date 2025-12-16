@@ -14,6 +14,19 @@ export async function POST(request: Request) {
       );
     }
 
+    // Check environment variables
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.NOTIFICATION_EMAIL) {
+      console.error('Missing environment variables:', {
+        SMTP_USER: !!process.env.SMTP_USER,
+        SMTP_PASS: !!process.env.SMTP_PASS,
+        NOTIFICATION_EMAIL: !!process.env.NOTIFICATION_EMAIL,
+      });
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
@@ -83,8 +96,9 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     console.error('Error sending email:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: errorMessage },
       { status: 500 }
     );
   }
