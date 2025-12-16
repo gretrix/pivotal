@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
     // Email to JT with form details
     const notificationEmail = {
-      from: process.env.SMTP_USER,
+      from: 'Pivotal Tech Solutions <jtremblay@pivotaltech.solutions>',
       to: process.env.NOTIFICATION_EMAIL,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 
     // Confirmation email to user
     const confirmationEmail = {
-      from: process.env.SMTP_USER,
+      from: 'Pivotal Tech Solutions <jtremblay@pivotaltech.solutions>',
       to: email,
       subject: 'Thank You for Contacting Pivotal Tech Solutions',
       html: `
