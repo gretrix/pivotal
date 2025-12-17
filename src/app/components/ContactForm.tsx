@@ -28,14 +28,15 @@ export default function ContactForm() {
     setErrorMessage('');
 
     // Get reCAPTCHA token
-    const recaptchaToken = await recaptchaRef.current?.executeAsync();
-    recaptchaRef.current?.reset();
+    const recaptchaToken = recaptchaRef.current?.getValue();
 
     if (!recaptchaToken) {
       setStatus('error');
       setErrorMessage('Please complete the reCAPTCHA verification.');
       return;
     }
+
+    recaptchaRef.current?.reset();
 
     try {
       const response = await fetch('/api/contact', {
@@ -169,7 +170,6 @@ export default function ContactForm() {
         <div className="flex justify-center">
           <ReCAPTCHA
             ref={recaptchaRef}
-            size="invisible"
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
           />
         </div>
