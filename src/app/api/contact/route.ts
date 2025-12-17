@@ -63,15 +63,24 @@ export async function POST(request: Request) {
     const notificationEmail = {
       from: 'Pivotal Tech Solutions <jtremblay@pivotaltech.solutions>',
       to: process.env.NOTIFICATION_EMAIL,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `[Pivotal Tech] New Contact Form from ${name}`,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); padding: 20px; border-radius: 8px 8px 0 0;">
+            <h2 style="color: white; margin: 0;">New Contact Form Submission</h2>
+            <p style="color: white; margin: 5px 0 0 0; font-size: 14px;">From: pivotaltech.solutions</p>
+          </div>
+          <div style="background: #f9fafb; padding: 20px; border-radius: 0 0 8px 8px;">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+            <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+            <p><strong>Message:</strong></p>
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+              <p style="margin: 0;">${message.replace(/\n/g, '<br>')}</p>
+            </div>
+          </div>
+        </div>
       `,
     };
 
