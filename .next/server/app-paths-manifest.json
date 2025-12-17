@@ -1,6 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/icon.png/route": "app/icon.png/route.js",
   "/ai-machine-learning/page": "app/ai-machine-learning/page.js",
   "/about/page": "app/about/page.js",
   "/blogs/[slug]/page": "app/blogs/[slug]/page.js",

@@ -10,6 +10,12 @@
       "internal": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/meeting-jt",
+      "destination": "https://calendly.com/meeting-jt",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/meeting-jt(?:/)?$"
     }
   ],
   "headers": [],
@@ -90,10 +96,10 @@
       "namedRegex": "^/digital\\-transformation(?:/)?$"
     },
     {
-      "page": "/favicon.ico",
-      "regex": "^/favicon\\.ico(?:/)?$",
+      "page": "/icon.png",
+      "regex": "^/icon\\.png(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/favicon\\.ico(?:/)?$"
+      "namedRegex": "^/icon\\.png(?:/)?$"
     },
     {
       "page": "/portfolio",
