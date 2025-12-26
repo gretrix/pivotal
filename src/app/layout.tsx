@@ -18,11 +18,15 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pivotaltech.solutions'),
   title: 'PivotalTech Solutions - Innovative Technology Solutions',
   description: 'Empowering businesses with innovative technology solutions that drive growth, efficiency, and digital transformation. Web development, cloud solutions, and digital transformation services.',
   keywords: 'technology solutions, web development, cloud solutions, digital transformation, business technology, software development',
   authors: [{ name: 'PivotalTech Solutions' }],
   creator: 'PivotalTech Solutions',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/pivotaltech_icon.png', type: 'image/png' },
@@ -37,6 +41,7 @@ export const metadata: Metadata = {
     description: 'Empowering businesses with innovative technology solutions that drive growth, efficiency, and digital transformation.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://pivotaltech.solutions',
   },
 }
 
