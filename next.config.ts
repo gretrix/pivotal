@@ -24,6 +24,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Headers configuration to force canonical domain
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://pivotaltech.solutions>; rel="canonical"',
+          },
+        ],
+      },
+    ];
+  },
   // Optimize webpack
   webpack: (config, { dev }) => {
     if (dev) {
