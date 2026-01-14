@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cybersecurity Solutions - PivotalTech Solutions',
+  description: 'Enterprise cybersecurity solutions including threat protection, security audits, compliance, and incident response services.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/cybersecurity',
+  },
+  openGraph: {
+    title: 'Cybersecurity Solutions - PivotalTech Solutions',
+    description: 'Enterprise security and threat protection solutions.',
+    url: 'https://pivotaltech.solutions/cybersecurity',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function Cybersecurity() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

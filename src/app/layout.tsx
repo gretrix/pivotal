@@ -24,17 +24,15 @@ export const metadata: Metadata = {
   keywords: 'technology solutions, web development, cloud solutions, digital transformation, business technology, software development',
   authors: [{ name: 'PivotalTech Solutions' }],
   creator: 'PivotalTech Solutions',
-  alternates: {
-    canonical: '/',
-  },
   icons: {
     icon: [
       { url: '/pivotaltech_icon.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
     apple: [
       { url: '/pivotaltech_icon.png', type: 'image/png' },
     ],
-    shortcut: '/pivotaltech_icon.png',
+    shortcut: '/favicon.ico',
   },
   openGraph: {
     title: 'PivotalTech Solutions - Innovative Technology Solutions',
@@ -42,6 +40,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://pivotaltech.solutions',
+    siteName: 'PivotalTech Solutions',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 }
 

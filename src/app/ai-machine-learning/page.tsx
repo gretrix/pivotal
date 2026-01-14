@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI & Machine Learning Solutions - PivotalTech Solutions',
+  description: 'Harness the power of artificial intelligence and machine learning. Predictive analytics, NLP, computer vision, and intelligent automation solutions.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/ai-machine-learning',
+  },
+  openGraph: {
+    title: 'AI & Machine Learning Solutions - PivotalTech Solutions',
+    description: 'Transform your business with AI and machine learning solutions.',
+    url: 'https://pivotaltech.solutions/ai-machine-learning',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function AIMachineLearning() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

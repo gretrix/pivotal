@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - PivotalTech Solutions',
+  description: 'Learn about how PivotalTech Solutions collects, uses, and protects your personal information. Your privacy is important to us.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy - PivotalTech Solutions',
+    description: 'Learn about how we protect your personal information.',
+    url: 'https://pivotaltech.solutions/privacy',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Digital Transformation Solutions - PivotalTech Solutions',
+  description: 'Strategic consulting and implementation to modernize your business processes and technology stack. Drive innovation and competitive advantage.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/digital-transformation',
+  },
+  openGraph: {
+    title: 'Digital Transformation Solutions - PivotalTech Solutions',
+    description: 'Strategic consulting and enterprise digital transformation solutions.',
+    url: 'https://pivotaltech.solutions/digital-transformation',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function DigitalTransformation() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

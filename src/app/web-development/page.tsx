@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Web Development Services - PivotalTech Solutions',
+  description: 'Custom web applications, e-commerce solutions, and responsive websites built with modern technologies like React, Next.js, and Node.js.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/web-development',
+  },
+  openGraph: {
+    title: 'Web Development Services - PivotalTech Solutions',
+    description: 'Custom web solutions built with modern technologies.',
+    url: 'https://pivotaltech.solutions/web-development',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function WebDevelopment() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

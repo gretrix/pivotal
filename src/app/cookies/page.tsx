@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy - PivotalTech Solutions',
+  description: 'Learn about how PivotalTech Solutions uses cookies and similar technologies to enhance your browsing experience.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/cookies',
+  },
+  openGraph: {
+    title: 'Cookie Policy - PivotalTech Solutions',
+    description: 'Learn about how we use cookies and similar technologies.',
+    url: 'https://pivotaltech.solutions/cookies',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function CookiePolicyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

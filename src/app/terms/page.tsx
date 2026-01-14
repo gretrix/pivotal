@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service - PivotalTech Solutions',
+  description: 'Read the terms and conditions that govern your use of PivotalTech Solutions services and website.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service - PivotalTech Solutions',
+    description: 'Terms and conditions for using our services.',
+    url: 'https://pivotaltech.solutions/terms',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

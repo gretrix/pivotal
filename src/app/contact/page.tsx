@@ -1,4 +1,28 @@
 import ContactForm from '../components/ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - PivotalTech Solutions',
+  description: 'Get in touch with PivotalTech Solutions. Contact us for innovative technology solutions, web development, cloud solutions, and digital transformation services.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/contact',
+  },
+  openGraph: {
+    title: 'Contact Us - PivotalTech Solutions',
+    description: 'Get in touch with PivotalTech Solutions for innovative technology solutions.',
+    url: 'https://pivotaltech.solutions/contact',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
 
 export default function ContactPage() {
 

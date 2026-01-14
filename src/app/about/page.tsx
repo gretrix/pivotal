@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - PivotalTech Solutions',
+  description: 'Learn about PivotalTech Solutions, a forward-thinking technology company dedicated to helping businesses thrive in the digital age since 2019.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/about',
+  },
+  openGraph: {
+    title: 'About Us - PivotalTech Solutions',
+    description: 'Learn about our mission to empower businesses with innovative technology solutions.',
+    url: 'https://pivotaltech.solutions/about',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

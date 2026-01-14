@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Portfolio - PivotalTech Solutions',
+  description: 'Explore our successful projects and see how we have helped businesses transform their operations with innovative technology solutions.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/portfolio',
+  },
+  openGraph: {
+    title: 'Portfolio - PivotalTech Solutions',
+    description: 'Explore our successful projects and technology solutions.',
+    url: 'https://pivotaltech.solutions/portfolio',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function Portfolio() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cloud Solutions & Services - PivotalTech Solutions',
+  description: 'Scalable cloud infrastructure, migration, and optimization services. AWS, Azure, and Google Cloud solutions for enterprise businesses.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/cloud-solutions',
+  },
+  openGraph: {
+    title: 'Cloud Solutions & Services - PivotalTech Solutions',
+    description: 'Scalable cloud infrastructure and enterprise-ready solutions.',
+    url: 'https://pivotaltech.solutions/cloud-solutions',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function CloudSolutions() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-pivotal-50">

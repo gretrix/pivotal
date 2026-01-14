@@ -1,4 +1,27 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'PivotalTech Solutions - Innovative Technology Solutions',
+  description: 'Empowering businesses with innovative technology solutions that drive growth, efficiency, and digital transformation. Web development, cloud solutions, and digital transformation services.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions',
+  },
+  openGraph: {
+    title: 'PivotalTech Solutions - Innovative Technology Solutions',
+    description: 'Empowering businesses with innovative technology solutions that drive growth, efficiency, and digital transformation.',
+    url: 'https://pivotaltech.solutions',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
 
 export default function Home() {
   return (

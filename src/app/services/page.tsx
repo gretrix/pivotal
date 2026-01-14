@@ -1,3 +1,28 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Services - PivotalTech Solutions',
+  description: 'Comprehensive technology solutions including web development, cloud solutions, AI & machine learning, cybersecurity, and digital transformation services.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/services',
+  },
+  openGraph: {
+    title: 'Our Services - PivotalTech Solutions',
+    description: 'Comprehensive technology solutions tailored to your business needs.',
+    url: 'https://pivotaltech.solutions/services',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

@@ -2,8 +2,26 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'TechScape Insights - PivotalTech Solutions',
-  description: 'Stay updated with the latest insights, trends, and innovations in technology and business.',
+  title: 'TechScape Insights - PivotalTech Solutions Blog',
+  description: 'Stay updated with the latest insights, trends, and innovations in technology and business. Expert articles on AI, cloud computing, cybersecurity, and digital transformation.',
+  alternates: {
+    canonical: 'https://pivotaltech.solutions/blogs',
+  },
+  openGraph: {
+    title: 'TechScape Insights - PivotalTech Solutions Blog',
+    description: 'Stay updated with the latest insights, trends, and innovations in technology and business.',
+    url: 'https://pivotaltech.solutions/blogs',
+    siteName: 'PivotalTech Solutions',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 }
 
 interface BlogPost {
