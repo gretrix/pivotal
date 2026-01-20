@@ -20,31 +20,6 @@ const nextConfig: NextConfig = {
       {
         source: '/meeting-jt',
         destination: 'https://calendly.com/meeting-jt',
-        permanent: true, // 308 redirect (permanent)
-      },
-      // Force www to non-www redirect
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.pivotaltech.solutions',
-          },
-        ],
-        destination: 'https://pivotaltech.solutions/:path*',
-        permanent: true,
-      },
-      // Force HTTPS
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        destination: 'https://pivotaltech.solutions/:path*',
         permanent: true,
       },
     ];
