@@ -40,14 +40,21 @@ fi
 
 # Create .env.local file
 echo "Creating environment file..."
-cat > .env.local << 'EOF'
-SMTP_USER=jtremblay@jontremblay.com
-SMTP_PASS=nnuo nmnv sryb uccc
-NOTIFICATION_EMAIL=jtremblay@pivotaltech.solutions
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE
-RECAPTCHA_SECRET_KEY=6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19
-NODE_ENV=production
-EOF
+echo "⚠️  IMPORTANT: You need to create .env.local with your credentials"
+echo "Create the file manually with:"
+echo "  SMTP_USER=your-email@domain.com"
+echo "  SMTP_PASS=your-app-password"
+echo "  NOTIFICATION_EMAIL=your-notification-email"
+echo "  NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-site-key"
+echo "  RECAPTCHA_SECRET_KEY=your-secret-key"
+echo "  NODE_ENV=production"
+echo ""
+echo "Checking if .env.local exists..."
+if [ ! -f .env.local ]; then
+  echo "❌ ERROR: .env.local file not found!"
+  echo "Please create .env.local with your environment variables before continuing."
+  exit 1
+fi
 
 # Install dependencies
 echo "Installing dependencies..."
