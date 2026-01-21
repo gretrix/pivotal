@@ -155,7 +155,7 @@ git log --all --full-history --source --all -- ec2-setup.sh
 git log -S "6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE" --all
 
 # Search for the old SMTP password
-git log -S "nnuo nmnv sryb uccc" --all
+git log -S "REDACTED_PASSWORD" --all
 ```
 
 If these commands return results, the credentials are still in history.
@@ -285,9 +285,9 @@ chmod +x .git/hooks/pre-commit
 ## Summary
 
 **What was exposed:**
-- reCAPTCHA Site Key: `6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE`
-- reCAPTCHA Secret Key: `6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19`
-- SMTP Password: `nnuo nmnv sryb uccc`
+- reCAPTCHA Site Key: `REDACTED`
+- reCAPTCHA Secret Key: `REDACTED`
+- SMTP Password: `REDACTED`
 - SMTP User: `jtremblay@jontremblay.com`
 
 **Actions taken:**

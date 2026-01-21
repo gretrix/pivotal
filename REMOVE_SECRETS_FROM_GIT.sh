@@ -24,9 +24,9 @@ cat > /tmp/filter-script.sh << 'FILTER_EOF'
 #!/bin/bash
 if [ "$GIT_COMMIT" = "d6395a8" ] || [ "$GIT_COMMIT" = "5aa2d25" ]; then
     # Replace sensitive data in ec2-setup.sh
-    sed -i 's/SMTP_PASS=nnuo nmnv sryb uccc/SMTP_PASS=your-app-password/g' ec2-setup.sh
-    sed -i 's/NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE/NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-site-key/g' ec2-setup.sh
-    sed -i 's/RECAPTCHA_SECRET_KEY=6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19/RECAPTCHA_SECRET_KEY=your-secret-key/g' ec2-setup.sh
+    sed -i 's/SMTP_PASS=REDACTED/SMTP_PASS=your-app-password/g' ec2-setup.sh
+    sed -i 's/NEXT_PUBLIC_RECAPTCHA_SITE_KEY=REDACTED/NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-site-key/g' ec2-setup.sh
+    sed -i 's/RECAPTCHA_SECRET_KEY=REDACTED/RECAPTCHA_SECRET_KEY=your-secret-key/g' ec2-setup.sh
 fi
 FILTER_EOF
 

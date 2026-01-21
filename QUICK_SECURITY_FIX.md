@@ -80,9 +80,9 @@ pip install git-filter-repo
 
 # Create a file with strings to replace
 cat > replacements.txt << 'EOF'
-nnuo nmnv sryb uccc==>your-app-password
-6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE==>your-site-key
-6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19==>your-secret-key
+REDACTED_PASSWORD==>your-app-password
+REDACTED_SITE_KEY==>your-site-key
+REDACTED_SECRET_KEY==>your-secret-key
 EOF
 
 # Replace in history
@@ -120,10 +120,10 @@ pm2 restart pivotal
 
 ```bash
 # Check Git history for old secrets
-git log -S "nnuo nmnv sryb uccc" --all
+git log -S "REDACTED_PASSWORD" --all
 # Should return nothing
 
-git log -S "6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE" --all
+git log -S "REDACTED_SITE_KEY" --all
 # Should return nothing
 ```
 

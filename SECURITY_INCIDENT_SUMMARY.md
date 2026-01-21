@@ -13,9 +13,9 @@
 ### Credentials Found in Git History
 File: `ec2-setup.sh` (commits: `d6395a8`, `5aa2d25`)
 
-1. **reCAPTCHA Site Key**: `6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE`
-2. **reCAPTCHA Secret Key**: `6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19`
-3. **SMTP Password**: `nnuo nmnv sryb uccc`
+1. **reCAPTCHA Site Key**: `6Lc...REDACTED...`
+2. **reCAPTCHA Secret Key**: `6Lc...REDACTED...`
+3. **SMTP Password**: `REDACTED`
 4. **SMTP User**: `jtremblay@jontremblay.com`
 5. **Notification Email**: `jtremblay@pivotaltech.solutions`
 
@@ -130,9 +130,9 @@ pip install git-filter-repo
 
 # Create replacements file
 cat > replacements.txt << 'EOF'
-nnuo nmnv sryb uccc==>REDACTED
-6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE==>REDACTED
-6Lc0pC0sAAAAAFqVVvW9gUI0DqylFwILklZcDO19==>REDACTED
+REDACTED_PASSWORD==>REDACTED
+REDACTED_SITE_KEY==>REDACTED
+REDACTED_SECRET_KEY==>REDACTED
 EOF
 
 # Replace in history
@@ -160,8 +160,8 @@ curl http://localhost:3000/api/health
 ### Check Git History is Clean
 ```bash
 # Should return nothing:
-git log -S "nnuo nmnv sryb uccc" --all
-git log -S "6Lc0pC0sAAAAADKvr_roi-e6VVJEldTQm2cdT2GE" --all
+git log -S "REDACTED_PASSWORD" --all
+git log -S "REDACTED_SITE_KEY" --all
 ```
 
 ### Test Application
